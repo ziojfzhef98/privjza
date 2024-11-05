@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://4html.net/live-preview.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="description" content="HTML code visualization in the browser only with the parameters you set. A quick and easy way to check results.">
+<meta name="keywords" content="html editor, online html converter, html file editor, save files, load html file, create html files">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML Editor Live Preview</title>
+<link rel="shortcut icon" href="https://4html.net/favicon.ico">
+<link rel="canonical" href="https://4html.net/live-preview.html">
+
+     <link href="./HTML Editor Live Preview_files/bootstrap.min.css" rel="stylesheet"> <!-- https://getbootstrap.com/ -->
+     <link href="./HTML Editor Live Preview_files/all.min.css" rel="stylesheet"> <!-- https://fontawesome.com/ -->
+     <link href="./HTML Editor Live Preview_files/templatemo-diagoona2.css" rel="stylesheet">
+     <script type="text/javascript" async="" src="./HTML Editor Live Preview_files/analytics.js"></script><script type="text/javascript" async="" src="./HTML Editor Live Preview_files/js"></script><script src="./HTML Editor Live Preview_files/jquery-3.4.1.min.js"></script>
+     
+     
+</head>
+<body style="background-color: white;">
+<style>
+#inp{right: 0}
+</style>
+<div class="tm-container">        
+        <div>
+            <div class="tm-row pt-4" id="cntr" style="display: none;">
+                <div class="tm-col-left">
+                    <div class="tm-site-header media">
+                        
+                        <div class="media-body">
+                            <h1 class="tm-sitename text-uppercase">Code Visualizer</h1>
+                            <p class="tm-slogon" style="color: white !important">Web Code Preview Tool</p>
+<p><button id="myButton" class="navbar-toggler toggler-example mr-0 ml-auto">Open HTML Editor</button></p>
+<p style="display: none"><button id="exec" class="navbar-toggler toggler-example mr-0 ml-auto" onclick="newContent();">Execute</button></p>
+<!-- <span id = "sp" style = "display: none">
+<input id="inp2" type="button" value="About" class="navbar-toggler toggler-example mr-0 ml-auto"></span> -->
+                        </div>        
+                    </div>
+                </div>
+                <div class="tm-col-right" id="righ">
+                    <nav class="navbar navbar-expand-lg" id="tm-main-nav">
+                        <button class="navbar-toggler toggler-example mr-0 ml-auto" type="button" data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span><i class="fas fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                            <ul class="navbar-nav text-uppercase">
+                                <li class="nav-item">
+<a class="nav-link tm-nav-link" href="https://4html.net/">Word to HTML<br><span style="font-size: 13px; color: #94f502">Clean HTML</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link tm-nav-link" href="https://4html.net/HTML-editor-871.html">WYSIWYG Editor</a>
+</li>
+<li class="nav-item">
+<a class="nav-link tm-nav-link" href="https://4html.net/MS-Office-Documents-viewer-873.html">Office Document Viewer<br><span style="font-size: 13px; color: #02ccf5">.docx, .xlsx, .pptx, .pdf, .txt</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link tm-nav-link" href="https://4html.net/HTML-editor-871.html?v=4">HTML Editor + File Manager<br><span style="font-size: 13px; color: #f59802">Insert a photo or image</span></a>
+  </li>
+                            </ul>                            
+                        </div>                        
+                    </nav>
+                </div>
+
+            </div>
+<input id="inp" onclick="hdn();" type="button" value="Hide Theme" style="right: 0px; background-color: rgba(0, 0, 0, 0.2); position: absolute; display: none; color: rgb(255, 255, 255);"> 
+            
+            <iframe id="cl" style="border: none; height: 150px; min-height: 900px; background-color: rgb(255, 255, 255); display: block; position: absolute; inset: 0px;" frameborder="0" allowfullscreen="true" src="./HTML Editor Live Preview_files/saved_resource.html"></iframe>                  
+            <div class="tm-row">
+                <div class="tm-col-left"></div>
+                <main class="tm-col-right" id="cntr2" style="display: none;">
+                    <section class="tm-content tm-about">
+                        <h2 class="mb-5 tm-content-title">Real-time HTML rendering</h2>
+                        <hr class="mb-4">
+                        <div class="media my-3">
+                            <!-- <i class="fas fa-shapes fa-3x p-3 mr-4"></i> -->
+                            <div class="media-body">
+                                <p id="parag" style="display: none;">You are seeing this message because the viewer cannot find the HTML source code. Click the button above to load the HTML editor and place the HTML code.</p>
+                                <p>To make you comfortable and save your time, we've made it possible to view the code display live, in real time. If you see this page, we suggest you visit the HTML Editor page and start using the High Capability Tool. The website is designed to be used by both beginners and advanced developers. The selection of a set of menus allows you to create projects of various complexity.</p>                         
+
+ </div> 
+                        </div>
+          
+                        <!-- <div class="media my-3" style = "display: none">
+                            <i class="fas fa-bookmark fa-3x p-3 mr-4"></i>
+                            <div class="media-body">                               
+                            </div> 
+                        </div> -->                       
+                    </section>
+                </main>
+            </div>
+        </div>        
+
+        <div class="tm-row" id="cntr3" style="display: none;">
+            <div class="tm-col-left text-center">            
+                <ul class="tm-bg-controls-wrapper">
+                    <li class="tm-bg-control" data-id="0"></li>
+                    <li class="tm-bg-control active" data-id="1"></li>
+                    <li class="tm-bg-control" data-id="2"></li>
+                </ul>            
+            </div>        
+            <div class="tm-col-right tm-col-footer">
+                <footer class="tm-site-footer text-right">
+                    <p class="mb-0">4html.net 2024 © Copyright
+                    
+                    </p>
+                </footer>
+            </div>   
+        </div>        
+
+        <!-- Diagonal background design -->
+        <div class="tm-bg" id="cntr4" style="height: 1153.91px; display: none;">
+            <div class="tm-bg-left" style="border-left: 0px; border-top: 1153.91px solid transparent;"></div>
+            <div class="tm-bg-right"></div>
+        </div>
+        </div>
+    
+    
+    <script src="./HTML Editor Live Preview_files/templatemo-script.js"></script>
+    <script src="./HTML Editor Live Preview_files/bootstrap.min.js"></script>
+    <script src="./HTML Editor Live Preview_files/jquery.backstretch.min.js"></script>
+<script>
+setTimeout(function  () {
+ zxy = localStorage.getItem("dat");
+  if (zxy !== null) {
+document.getElementById("cl").innerHTML= zxy;  
+window.addEventListener("scroll", del);
+function del () {
+document.getElementById("cntr2").style.display = "inline-block";
+document.getElementById("cntr3").style.display = "inline-block";
+} 
+localStorage.removeItem("dat");
+localStorage.removeItem("dat5");
+}
+},50);
+document.getElementById("myButton").onclick = function () {
+window.open('https://4html.net/Online-HTML-Editor-Text-to-HTML-Converter-870.html', '_blank');
+    }
+
+</script>
+<script src="./HTML Editor Live Preview_files/scriptend2.js"></script>    
+<script async="" src="./HTML Editor Live Preview_files/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-36929192-1');
+</script>
+
+<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 671px; width: 1064px; z-index: -999999; position: fixed; display: none;"><div class="backstretch-item deleteable" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 100%; height: 100%; z-index: -999999;"><img alt="" src="./HTML Editor Live Preview_files/diagoona-bg-2.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1192.89px; height: 671px; max-width: none; inset: 0px auto auto -64.4444px;"></div><div class="backstretch-item" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 100%; height: 100%; z-index: -999999; opacity: 0.684062;"><img alt="" src="https://4html.net/img/diagoona-bg-3.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1137.29px; height: 671px; max-width: none; inset: 0px auto auto -36.6441px;"></div></div><div id="SASContainer" class="sasext sasextdklgc sasdklgc-display-none ui-resizable ui-draggable">
+			<div id="sas-panel-contents">
+				<div class="first-row sas-header ui-draggable-handle">
+          <div class="tr-btns">
+            <span style="float:right"><a id="closeSAS" class="topButton"></a></span>
+          </div> 
+          <div class="t-logo">
+            <a href="https://selleramp.com/" target="_blank">
+              <img class="sas-logo-image" src="chrome-extension://kidmffepbniamfbibhfgdakkggchipjl/images/sas-logo-mono2.png">
+            </a> 
+          </div>
+          <a href="https://sas.selleramp.com/extension/setup?src=ext&amp;ver=2.1.1e&amp;redirectUrl=https://sas.selleramp.com/account?src=ext&amp;ver=2.1.1e" target="sasFrame">
+            <img src="chrome-extension://kidmffepbniamfbibhfgdakkggchipjl/images/user-regular.svg" alt="account-icon" class="sas-account-icon">
+          </a>
+				</div>
+    <div class="second-row">
+      <div id="loadingMessage">
+        <img class="loadingimg" src="chrome-extension://kidmffepbniamfbibhfgdakkggchipjl/images/exticon.png">
+      </div>
+      <iframe name="sasFrame" id="sasFrame" allowtransparency="true" src="./HTML Editor Live Preview_files/saved_resource(1).html"></iframe>
+    </div>
+    <div class="bottom-row"> 
+      <nav class="sasdklgc-menu"><ul id="position-buttons" class="sasdklgc-toolbar-buttons"><li id="li-pos-0" data-position="0"><img src="chrome-extension://kidmffepbniamfbibhfgdakkggchipjl/images/floating.png" title="Floating"></li><li id="li-pos-1" data-position="1"><img src="chrome-extension://kidmffepbniamfbibhfgdakkggchipjl/images/docked-left.png" title="Docked Left"></li><li id="li-pos-2" data-position="2"><img src="chrome-extension://kidmffepbniamfbibhfgdakkggchipjl/images/docked-right.png" title="Docked Right"></li></ul><ul id="url-buttons" class="sasdklgc-toolbar-buttons">
+<li id="home-btn">
+  <a href="https://sas.selleramp.com/extension/setup?src=ext&amp;ver=2.1.1e&amp;redirectUrl=https://sas.selleramp.com/sas/lookup?src=ext&amp;ver=2.1.1e" target="sasFrame"><img src="chrome-extension://kidmffepbniamfbibhfgdakkggchipjl/images/house-chimney.svg" title="Home" alt="home">
+</a></li><a href="https://sas.selleramp.com/extension/setup?src=ext&amp;ver=2.1.1e&amp;redirectUrl=https://sas.selleramp.com/sas/lookup?src=ext&amp;ver=2.1.1e" target="sasFrame">
+</a><li id="history-btn"><a href="https://sas.selleramp.com/extension/setup?src=ext&amp;ver=2.1.1e&amp;redirectUrl=https://sas.selleramp.com/sas/lookup?src=ext&amp;ver=2.1.1e" target="sasFrame">
+  </a><a href="https://sas.selleramp.com/extension/setup?src=ext&amp;ver=2.1.1e&amp;redirectUrl=https://sas.selleramp.com/sas/history?src=ext&amp;ver=2.1.1e" target="sasFrame"><img src="chrome-extension://kidmffepbniamfbibhfgdakkggchipjl/images/clock-rotate-left.svg" title="History" alt="history">
+</a></li><a href="https://sas.selleramp.com/extension/setup?src=ext&amp;ver=2.1.1e&amp;redirectUrl=https://sas.selleramp.com/sas/history?src=ext&amp;ver=2.1.1e" target="sasFrame">
+</a><li id="settings-btn"><a href="https://sas.selleramp.com/extension/setup?src=ext&amp;ver=2.1.1e&amp;redirectUrl=https://sas.selleramp.com/sas/history?src=ext&amp;ver=2.1.1e" target="sasFrame">
+  </a><a href="https://sas.selleramp.com/extension/setup?src=ext&amp;ver=2.1.1e&amp;redirectUrl=https://sas.selleramp.com/user/update?src=ext&amp;ver=2.1.1e" target="sasFrame"><img src="chrome-extension://kidmffepbniamfbibhfgdakkggchipjl/images/gear.svg" title="Settings" alt="settings">
+</a></li><a href="https://sas.selleramp.com/extension/setup?src=ext&amp;ver=2.1.1e&amp;redirectUrl=https://sas.selleramp.com/user/update?src=ext&amp;ver=2.1.1e" target="sasFrame">
+</a><li id="contact-btn"><a href="https://sas.selleramp.com/extension/setup?src=ext&amp;ver=2.1.1e&amp;redirectUrl=https://sas.selleramp.com/user/update?src=ext&amp;ver=2.1.1e" target="sasFrame">
+  </a><a href="mailto:support@selleramp.com" target="_blank">
+    <img src="chrome-extension://kidmffepbniamfbibhfgdakkggchipjl/images/envelope.svg" title="Contact" alt="contact">
+  </a>
+</li></ul></nav>
+    </div>
+  </div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div></div></body></html>
